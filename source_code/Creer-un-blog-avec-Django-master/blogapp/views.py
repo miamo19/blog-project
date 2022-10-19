@@ -4,7 +4,7 @@ from .models import CreateBlog, Comment
 from .forms import BlogForm
 
 class List(ListView):
-    template_name = 'blog/index.html'
+    template_name = 'blogapp/index.html'
     queryset = CreateBlog.objects.all()
     paginate_by = 3
 
@@ -28,5 +28,5 @@ def detailView(request, slug):
         'form':form,
 
     }
-    return render(request, 'blog/update.html', content)
+    return render(request, 'blogapp/update.html', content)
      
