@@ -6,7 +6,7 @@ from .models import Comment
 
 
 class CommentForm(forms.ModelForm):
-    username = forms.CharField(max_length=100, widget=TextInput(attrs={"class":"form-control"}))
+    username = forms.CharField(max_length=50, widget=TextInput(attrs={"class":"form-control"}))
     email    = forms.EmailField(widget=TextInput(attrs={"class": "form-control" }))
     body     = forms.CharField(widget=Textarea(attrs={"class": "form-control",
                                                       'rows':3,
