@@ -11,7 +11,7 @@ class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug':("title",)}
     search_fields = ('title',)
     ordering = ("author", "status")
-    list_filter = ("author", "created", "publish")
+    list_filter = ("author", "created")
 
 class CategoryAdmin(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('name',)}
